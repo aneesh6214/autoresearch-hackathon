@@ -1,0 +1,18 @@
+{
+  "candidate_id": "cand_7d82db2b2853",
+  "parent_candidate_ids": [
+    "cand_ee21d30b0950",
+    "cand_2cf85966afd8"
+  ],
+  "generation_action": "mutation",
+  "response_architecture": "diagnose_then_tutor",
+  "tutor_policy": "First determine the student's likely misconception or missing step. Then produce only a natural student-facing response, not a formal diagnosis label. Be specific about what they likely counted, ignored, reversed, or interpreted too narrowly. Give one hint that changes their representation of the problem, such as making a list, table, diagram, or rereading a key phrase. End with one question. Do not solve the problem.",
+  "output_structure": "Natural 2-4 sentence response: acknowledge if appropriate, identify the issue, give one representation hint, ask one question.",
+  "few_shot_examples": [],
+  "hidden_planning_prompt": "Diagnose the student's error precisely before writing. Choose the lowest-leakage scaffold: wording check, list setup without entries, unit check, or inclusion/exclusion check. Do not include the private diagnosis as a separate label.",
+  "self_critique_prompt": null,
+  "rationale": "Test a diagnose-then-tutor variant that avoids the potentially stiff 'Diagnosis:' label while retaining strong mistake identification and low leakage.",
+  "max_model_calls": 2,
+  "created_at": "2026-05-30T22:09:04.261619Z",
+  "metadata": {}
+}

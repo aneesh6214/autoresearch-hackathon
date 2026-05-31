@@ -1,0 +1,47 @@
+{
+  "seed": 20260530,
+  "sources": {
+    "MathTutorBench": {
+      "path": "/Users/aneesh/Documents/autoresearch hackathon/data/raw/mathtutorbench-main",
+      "source": "https://github.com/eth-lre/mathtutorbench",
+      "usage": "primary math tutoring quality signal"
+    },
+    "TutorBench": {
+      "dataset": "ScaleAI/TutorBench_sample",
+      "source": "https://huggingface.co/datasets/ScaleAI/TutorBench_sample",
+      "usage": "text-only checkpoint breadth across school subjects",
+      "note": "The full TutorBench files are over 1 GB and image-heavy; this run uses the public sample text-only rows to stay inside the three-hour loop."
+    },
+    "SafeTutors": {
+      "source": "https://arxiv.org/abs/2603.17373",
+      "usage": "local safety and pedagogical-harm gate inspired by the paper taxonomy",
+      "note": "No public downloadable SafeTutors dataset was found during setup, so the gate uses team-authored synthetic scenarios."
+    },
+    "private_hidden": {
+      "source": "team-authored local eval",
+      "usage": "final validation only; never passed to the research agent"
+    }
+  },
+  "counts": {
+    "inner_loop": 16,
+    "checkpoint": 38,
+    "private_final": 40,
+    "inner_loop_by_benchmark": {
+      "MathTutorBench": 10,
+      "SafeTutors-style": 6
+    },
+    "checkpoint_by_benchmark": {
+      "MathTutorBench": 18,
+      "TutorBench": 10,
+      "SafeTutors-style": 10
+    },
+    "private_final_by_benchmark": {
+      "PrivateHidden": 40
+    }
+  },
+  "files": {
+    "inner_loop": "/Users/aneesh/Documents/autoresearch hackathon/data/evals/inner_loop_benchmark.jsonl",
+    "checkpoint": "/Users/aneesh/Documents/autoresearch hackathon/data/evals/checkpoint_benchmark.jsonl",
+    "private_final": "/Users/aneesh/Documents/autoresearch hackathon/data/private_hidden/final_private.jsonl"
+  }
+}

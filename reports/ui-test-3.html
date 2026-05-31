@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Autoresearch Tutor Report</title>
+  <style>
+    body { margin: 0; background: #f4f5f7; color: #1b1f24; font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 920px; margin: 0 auto; padding: 32px; }
+    header { border-left: 5px solid #2f6f73; padding: 20px 24px; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08); }
+    h1 { margin: 0 0 6px; font-size: 28px; }
+    h2 { margin: 28px 0 12px; font-size: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
+    .metric, .turn, .strategy { background: white; border: 1px solid #d9dee7; border-radius: 8px; padding: 14px; }
+    .metric span, .role, .meta { color: #5d6778; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .metric strong { display: block; margin-top: 4px; font-size: 16px; }
+    .turn { margin-bottom: 10px; }
+    .turn.student { border-left: 4px solid #446bb3; }
+    .turn.tutor { border-left: 4px solid #2f6f73; }
+    .meta { margin-top: 10px; text-transform: none; letter-spacing: 0; }
+    pre { white-space: pre-wrap; background: #20242b; color: #f6f7f9; border-radius: 8px; padding: 16px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Autoresearch Tutor Session</h1>
+      <div>Generated 5/30/2026, 4:55:34 PM</div>
+      <div class="grid">
+        <div class="metric"><span>Winner</span><strong>cand_7d82db2b2853</strong></div>
+        <div class="metric"><span>Architecture</span><strong>diagnose_then_tutor</strong></div>
+        <div class="metric"><span>Subject</span><strong>physics</strong></div>
+        <div class="metric"><span>Turns</span><strong>2</strong></div>
+      </div>
+    </header>
+    <h2>Session Transcript</h2>
+    
+        <section class="turn student">
+          <div class="role">student</div>
+          <p>Force is mass times velocity, right? My answer uses F = mv.</p>
+          
+        </section>
+      
+        <section class="turn tutor">
+          <div class="role">tutor</div>
+          <p>Not quite—\(mv\) is momentum, which tells you how much motion an object has, not the force acting on it. Force is tied to how motion changes, so try making a quick table with “quantity,” “formula,” and “units” for force, mass, velocity, and acceleration. What quantity describes the change in velocity that force is related to?</p>
+          <div class="meta">2 calls · 6.6s · 869 tokens</div>
+        </section>
+      
+    <h2>Configuration</h2>
+    <section class="strategy">
+      <p><strong>Target concept:</strong> Newton&#039;s laws</p>
+      <p><strong>Tutor goal:</strong> Use the optimized tutor strategy. Diagnose the student&#039;s current state, avoid answer dumping, and end with one concrete next question.</p>
+    </section>
+    <h2>Optimized Strategy</h2>
+    <pre>{
+  &quot;candidate_id&quot;: &quot;cand_7d82db2b2853&quot;,
+  &quot;parent_candidate_ids&quot;: [
+    &quot;cand_ee21d30b0950&quot;,
+    &quot;cand_2cf85966afd8&quot;
+  ],
+  &quot;generation_action&quot;: &quot;mutation&quot;,
+  &quot;response_architecture&quot;: &quot;diagnose_then_tutor&quot;,
+  &quot;tutor_policy&quot;: &quot;First determine the student&#039;s likely misconception or missing step. Then produce only a natural student-facing response, not a formal diagnosis label. Be specific about what they likely counted, ignored, reversed, or interpreted too narrowly. Give one hint that changes their representation of the problem, such as making a list, table, diagram, or rereading a key phrase. End with one question. Do not solve the problem.&quot;,
+  &quot;output_structure&quot;: &quot;Natural 2-4 sentence response: acknowledge if appropriate, identify the issue, give one representation hint, ask one question.&quot;,
+  &quot;few_shot_examples&quot;: [],
+  &quot;hidden_planning_prompt&quot;: &quot;Diagnose the student&#039;s error precisely before writing. Choose the lowest-leakage scaffold: wording check, list setup without entries, unit check, or inclusion/exclusion check. Do not include the private diagnosis as a separate label.&quot;,
+  &quot;self_critique_prompt&quot;: null,
+  &quot;rationale&quot;: &quot;Test a diagnose-then-tutor variant that avoids the potentially stiff &#039;Diagnosis:&#039; label while retaining strong mistake identification and low leakage.&quot;,
+  &quot;max_model_calls&quot;: 2,
+  &quot;created_at&quot;: &quot;2026-05-30T22:09:04.261619Z&quot;,
+  &quot;metadata&quot;: {}
+}</pre>
+    <h2>Run Summary</h2>
+    <pre>{
+  &quot;output&quot;: &quot;runs/full-resume-20260530T230332Z&quot;,
+  &quot;elapsed_seconds&quot;: 2598.4507195000187,
+  &quot;winner_candidate_id&quot;: &quot;cand_7d82db2b2853&quot;,
+  &quot;stop_reasons&quot;: [
+    &quot;completed configured optimization phases&quot;
+  ],
+  &quot;candidate_count&quot;: 32,
+  &quot;passed_count&quot;: 24,
+  &quot;rejected_count&quot;: 8,
+  &quot;error_count&quot;: 0,
+  &quot;phase_counts&quot;: {
+    &quot;inner_loop&quot;: 25,
+    &quot;checkpoint&quot;: 5,
+    &quot;final&quot;: 2
+  },
+  &quot;costs&quot;: {
+    &quot;estimated_openai_usd&quot;: 47.624865,
+    &quot;estimated_modal_usd&quot;: 0.36598304506493057,
+    &quot;estimated_total_usd&quot;: 47.99084804506493
+  },
+  &quot;budgets&quot;: {
+    &quot;openai_budget_usd&quot;: 270,
+    &quot;modal_budget_usd&quot;: 270,
+    &quot;stop_budget_fraction&quot;: 0.95,
+    &quot;max_wall_clock_minutes&quot;: 180
+  }
+}</pre>
+  </main>
+</body>
+</html>

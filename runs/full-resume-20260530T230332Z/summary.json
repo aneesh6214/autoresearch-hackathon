@@ -1,0 +1,28 @@
+{
+  "output": "runs/full-resume-20260530T230332Z",
+  "elapsed_seconds": 2598.4507195000187,
+  "winner_candidate_id": "cand_7d82db2b2853",
+  "stop_reasons": [
+    "completed configured optimization phases"
+  ],
+  "candidate_count": 32,
+  "passed_count": 24,
+  "rejected_count": 8,
+  "error_count": 0,
+  "phase_counts": {
+    "inner_loop": 25,
+    "checkpoint": 5,
+    "final": 2
+  },
+  "costs": {
+    "estimated_openai_usd": 47.624865,
+    "estimated_modal_usd": 0.36598304506493057,
+    "estimated_total_usd": 47.99084804506493
+  },
+  "budgets": {
+    "openai_budget_usd": 270.0,
+    "modal_budget_usd": 270.0,
+    "stop_budget_fraction": 0.95,
+    "max_wall_clock_minutes": 180.0
+  }
+}

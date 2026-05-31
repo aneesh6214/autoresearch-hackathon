@@ -1,0 +1,27 @@
+{
+  "output": "runs/full-20260530T215706Z",
+  "elapsed_seconds": 2246.843027875002,
+  "winner_candidate_id": "cand_67f478c13ab9",
+  "stop_reasons": [
+    "no checkpoint candidate passed gates"
+  ],
+  "candidate_count": 30,
+  "passed_count": 19,
+  "rejected_count": 11,
+  "error_count": 0,
+  "phase_counts": {
+    "inner_loop": 25,
+    "checkpoint": 5
+  },
+  "costs": {
+    "estimated_openai_usd": 43.382175,
+    "estimated_modal_usd": 0.33190375861937493,
+    "estimated_total_usd": 43.71407875861937
+  },
+  "budgets": {
+    "openai_budget_usd": 270.0,
+    "modal_budget_usd": 270.0,
+    "stop_budget_fraction": 0.95,
+    "max_wall_clock_minutes": 180.0
+  }
+}
