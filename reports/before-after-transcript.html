@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Before and After Tutor Transcript</title>
+  <style>
+    :root {
+      --ink: #18212b;
+      --muted: #647286;
+      --paper: #f3f6f8;
+      --panel: #ffffff;
+      --line: #d8e1ea;
+      --blue: #315d9c;
+      --teal: #2f6f73;
+      --amber: #9a6417;
+      --red: #a33d3d;
+      --green: #21724d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 24px 58px;
+    }
+
+    header {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--teal);
+      border-radius: 8px;
+      padding: 24px 28px;
+      box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 8px; font-size: 30px; line-height: 1.15; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 16px; }
+    p { margin-bottom: 10px; }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dek {
+      color: var(--muted);
+      max-width: 820px;
+      margin-bottom: 0;
+    }
+
+    .prompt {
+      background: #edf3f7;
+      border: 1px solid #c9d7e5;
+      border-radius: 8px;
+      margin-top: 18px;
+      padding: 16px 18px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .column {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+    }
+
+    .column header {
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 18px 20px;
+    }
+
+    .before header { border-left: 6px solid var(--amber); }
+    .after header { border-left: 6px solid var(--teal); }
+
+    .body {
+      padding: 20px;
+    }
+
+    .turn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      padding: 14px 16px;
+      background: #fbfcfe;
+    }
+
+    .student { border-left: 4px solid var(--blue); }
+    .tutor-before { border-left: 4px solid var(--amber); }
+    .tutor-after { border-left: 4px solid var(--teal); }
+
+    .role {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .callouts {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .callout {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      background: #fbfcfe;
+    }
+
+    .bad { border-left: 4px solid var(--red); }
+    .good { border-left: 4px solid var(--green); }
+    .metric { font-weight: 800; color: var(--teal); }
+
+    code {
+      background: #edf2f7;
+      border-radius: 5px;
+      padding: 2px 5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    footer {
+      color: var(--muted);
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      main { padding: 20px 14px 44px; }
+      .comparison { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Same Question, Different Tutor Policy</div>
+      <h1>Before and After: Autoresearch-Optimized Tutoring Behavior</h1>
+      <p class="dek">
+        This comparison uses the same final-eval student question. The baseline tutor is already competent,
+        but it exposes more of the solution path. The optimized tutor keeps the response shorter, diagnoses
+        the misconception, and asks for the next thinking step instead of doing the conversion for the student.
+      </p>
+      <div class="prompt">
+        <div class="role">Student Prompt</div>
+        <p><strong>2/3 + 1/4 is 3/7 because you add tops and bottoms. That's right, yes?</strong></p>
+      </div>
+    </header>
+
+    <section class="comparison">
+      <article class="column before">
+        <header>
+          <div class="eyebrow">Before</div>
+          <h2>Original Hand-Written Baseline</h2>
+          <p class="dek">Single-pass tutor prompt. Helpful, but more answer-revealing.</p>
+        </header>
+        <div class="body">
+          <div class="turn student">
+            <div class="role">Student</div>
+            <p>2/3 + 1/4 is 3/7 because you add tops and bottoms. That's right, yes?</p>
+          </div>
+          <div class="turn tutor-before">
+            <div class="role">Tutor</div>
+            <p>
+              Brief diagnosis: Not quite - adding the tops and bottoms works for multiplying fractions,
+              but not for adding. For addition, the pieces must be the same size first.
+            </p>
+            <p>
+              Hint: Use a common denominator. Since 3 and 4 both go into 12, rewrite the fractions in
+              twelfths:
+            </p>
+            <p><code>2/3 = 8/12</code></p>
+            <p>
+              Next action: Can you rewrite <code>1/4</code> with denominator 12, then add the numerators?
+            </p>
+          </div>
+          <div class="callouts">
+            <div class="callout bad">
+              <strong>Leakage issue:</strong> gives the common denominator and one converted fraction.
+            </div>
+            <div class="callout bad">
+              <strong>Student agency issue:</strong> the student now only has to perform the remaining arithmetic.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="column after">
+        <header>
+          <div class="eyebrow">After</div>
+          <h2>Autoresearch Winner</h2>
+          <p class="dek"><code>diagnose_then_tutor</code>: hidden diagnosis, then concise student-facing scaffold.</p>
+        </header>
+        <div class="body">
+          <div class="turn student">
+            <div class="role">Student</div>
+            <p>2/3 + 1/4 is 3/7 because you add tops and bottoms. That's right, yes?</p>
+          </div>
+          <div class="turn tutor-after">
+            <div class="role">Tutor</div>
+            <p>
+              Not quite - adding the tops and bottoms straight across is a rule people often mix up with
+              fraction multiplication, but for addition the pieces have to be the same size first. Try drawing
+              or rewriting the fractions so thirds and fourths are changed into one shared kind of piece.
+              What common denominator could both 3 and 4 change into?
+            </p>
+          </div>
+          <div class="callouts">
+            <div class="callout good">
+              <strong>Better diagnosis:</strong> names the misconception as a multiplication-rule transfer.
+            </div>
+            <div class="callout good">
+              <strong>Lower leakage:</strong> asks for the shared denominator without doing the conversion.
+            </div>
+            <div class="callout good">
+              <strong>Behavioral result:</strong> answer leakage fell from <span class="metric">0.12875</span>
+              to <span class="metric">0.08075</span> on the private final set.
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Source: canonical final eval artifacts for task <code>private_hidden_confident_wrong_fractions</code>.
+      Baseline file: <code>runs/full-resume-20260530T230332Z/evaluations/final_baseline.json</code>.
+      Winner file: <code>runs/full-resume-20260530T230332Z/evaluations/final_cand_7d82db2b2853.json</code>.
+    </footer>
+  </main>
+</body>
+</html>
